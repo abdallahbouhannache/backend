@@ -1,0 +1,46 @@
+<%- include('header'); -%>
+
+<form action="/" method="POST" class="ui form">
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      cols="30"
+      rows="10"
+      value="---"
+    ></textarea>
+  </div>
+  <button type="submit" class="ui blue labeled submit icon button">
+    <i class="icon edit"></i> Envoyer
+  </button>
+</form>
+
+<div class="ui messages comments" style="margin-bottom: 5em;">
+  <h3 class="ui diving header">Commentaires</h3>
+
+  <% for (message of messages){ %>
+  <div class="comment"  style="border: 1px solid rgba(0, 0, 0, 0.384);">
+    <a href="messages/<%=message.id%>" class="avatar">
+      <img src="https://randomuser.me/api/portraits/lego/4.jpg" alt="" />
+    </a>
+    <div class="content">
+      <div class="metadata">
+        <div class="date"><%=message.created_at%><</div>
+      </div>
+
+      <form action="/" method="POST" class="ui form">
+      <input name="msgId" type="text" value="<%=message.id%>" style="display: none;"/>
+      <input  type="submit" value="remove"  id="delCmnt" class="ui red  button" style=" padding: 5px; float:right;">-</input>
+      </form>
+      <div class="test"><%=message.content%></div>
+    </div>
+  </div>
+  
+  <%} %>
+</div>
+
+<button name="eventJS" >someEventsToNodejs</button>
+</div>
+
+<%- include('footer'); -%>

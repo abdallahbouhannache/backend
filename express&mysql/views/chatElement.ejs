@@ -1,0 +1,20 @@
+< % -include('./pages/header.ejs'); - %>
+
+<div class="ui messages comments">
+  <h3 class="ui diving header">Commentaires</h3>
+
+  <div class="comment">
+    <a href="messages/<%=message.id%>" class="avatar">
+      <img src="https://randomuser.me/api/portraits/lego/4.jpg" alt="" />
+    </a>
+
+    <div class="content">
+      <div class="metadata">
+        <div class="date"><%=message.created_at%><</div>
+      </div>
+      <div class="test"><%=message.content%></div>
+    </div>
+  </div>
+</div>
+
+<% -include('./pages/footer.ejs'); - %>
