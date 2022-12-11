@@ -8,7 +8,7 @@
     "cookie-session": "^1.4.0",
     "date-fns": "^2.9.0",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "httpdispatcher": "^2.1.2",
     "lodash": "^4.17.15",
     "mysql": "^2.17.1",
